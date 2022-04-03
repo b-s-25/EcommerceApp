@@ -1,0 +1,224 @@
+2022-04-03 23:07:20.201 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 23:07:20.219 +05:30 [INF] Hosting environment: Development
+2022-04-03 23:07:20.220 +05:30 [INF] Content root path: C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer
+2022-04-03 23:07:20.221 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - -
+2022-04-03 23:07:20.288 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-04-03 23:07:20.302 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - - - 301 - - 83.9946ms
+2022-04-03 23:07:20.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 179.3243ms
+2022-04-03 23:07:20.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - -
+2022-04-03 23:07:20.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - -
+2022-04-03 23:07:20.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-04-03 23:07:20.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 23:07:20.486 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 10.0442ms
+2022-04-03 23:07:20.512 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 23:07:20.512 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 23:07:20.512 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 23:07:20.514 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - - - 200 142933 text/css 39.1653ms
+2022-04-03 23:07:20.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 41.8514ms
+2022-04-03 23:07:20.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 55.3615ms
+2022-04-03 23:07:21.247 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - -
+2022-04-03 23:07:21.269 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - - - 404 - - 21.7114ms
+2022-04-03 23:07:21.481 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - -
+2022-04-03 23:07:21.483 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.1157ms
+2022-04-03 23:07:21.610 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - -
+2022-04-03 23:07:21.715 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 104.5670ms
+2022-04-03 23:07:47.060 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74
+2022-04-03 23:07:47.067 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:07:47.091 +05:30 [INF] Route matched with {action = "Post", controller = "ProductCatalog"}. Executing controller action with signature System.Net.Http.HttpResponseMessage Post(DomainLayer.Product) on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:07:47.552 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:07:48.021 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([description], [model], [name], [price])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-04-03 23:07:48.063 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Net.Http.HttpResponseMessage'.
+2022-04-03 23:07:48.083 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.Post (APILayer) in 988.1242ms
+2022-04-03 23:07:48.083 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:07:48.086 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74 - 200 - application/json;+charset=utf-8 1026.2372ms
+2022-04-03 23:07:49.659 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74
+2022-04-03 23:07:49.659 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:07:49.660 +05:30 [INF] Route matched with {action = "Post", controller = "ProductCatalog"}. Executing controller action with signature System.Net.Http.HttpResponseMessage Post(DomainLayer.Product) on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:07:49.692 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:07:49.695 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([description], [model], [name], [price])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-04-03 23:07:49.696 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Net.Http.HttpResponseMessage'.
+2022-04-03 23:07:49.697 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.Post (APILayer) in 37.0997ms
+2022-04-03 23:07:49.697 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:07:49.697 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74 - 200 - application/json;+charset=utf-8 38.4318ms
+2022-04-03 23:08:02.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/api/ProductCatalog - -
+2022-04-03 23:08:02.390 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:08:02.391 +05:30 [INF] Route matched with {action = "GetAll", controller = "ProductCatalog"}. Executing controller action with signature System.Collections.IEnumerable GetAll() on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:08:02.397 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:08:02.544 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[id], [p].[description], [p].[model], [p].[name], [p].[price]
+FROM [Products] AS [p]
+2022-04-03 23:08:02.549 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DomainLayer.Product, DomainLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-04-03 23:08:02.551 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.GetAll (APILayer) in 159.6491ms
+2022-04-03 23:08:02.551 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:08:02.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/api/ProductCatalog - - - 200 - application/json;+charset=utf-8 161.6510ms
+2022-04-03 23:10:47.309 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 23:10:47.323 +05:30 [INF] Hosting environment: Development
+2022-04-03 23:10:47.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - -
+2022-04-03 23:10:47.324 +05:30 [INF] Content root path: C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer
+2022-04-03 23:10:47.378 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-04-03 23:10:47.385 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - - - 301 - - 64.3097ms
+2022-04-03 23:10:47.537 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 158.8608ms
+2022-04-03 23:10:47.541 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - -
+2022-04-03 23:10:47.541 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - -
+2022-04-03 23:10:47.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 23:10:47.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-04-03 23:10:47.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 3.5313ms
+2022-04-03 23:10:47.604 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 23:10:47.604 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 23:10:47.607 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - - - 200 142933 text/css 65.3304ms
+2022-04-03 23:10:47.607 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 23:10:47.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 69.7223ms
+2022-04-03 23:10:47.633 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 91.9163ms
+2022-04-03 23:10:48.592 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - -
+2022-04-03 23:10:48.614 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - - - 404 - - 22.5082ms
+2022-04-03 23:10:48.757 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - -
+2022-04-03 23:10:48.760 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 2.4307ms
+2022-04-03 23:10:49.301 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - -
+2022-04-03 23:10:49.413 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 112.0745ms
+2022-04-03 23:11:42.966 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74
+2022-04-03 23:11:42.980 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:11:43.004 +05:30 [INF] Route matched with {action = "Post", controller = "ProductCatalog"}. Executing controller action with signature System.Net.Http.HttpResponseMessage Post(DomainLayer.Product) on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:11:43.426 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:11:43.864 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([description], [model], [name], [price])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-04-03 23:11:43.904 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Net.Http.HttpResponseMessage'.
+2022-04-03 23:11:43.922 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.Post (APILayer) in 914.3451ms
+2022-04-03 23:11:43.922 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:11:43.925 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 74 - 200 - application/json;+charset=utf-8 958.9068ms
+2022-04-03 23:11:54.609 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/api/ProductCatalog - -
+2022-04-03 23:11:54.610 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:11:54.612 +05:30 [INF] Route matched with {action = "GetAll", controller = "ProductCatalog"}. Executing controller action with signature System.Collections.IEnumerable GetAll() on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:11:54.638 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:11:54.789 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[id], [p].[description], [p].[model], [p].[name], [p].[price]
+FROM [Products] AS [p]
+2022-04-03 23:11:54.795 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DomainLayer.Product, DomainLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-04-03 23:11:54.797 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.GetAll (APILayer) in 184.4107ms
+2022-04-03 23:11:54.797 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:11:54.797 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/api/ProductCatalog - - - 200 - application/json;+charset=utf-8 188.3441ms
+2022-04-03 23:26:33.197 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 23:26:33.224 +05:30 [INF] Hosting environment: Development
+2022-04-03 23:26:33.225 +05:30 [INF] Content root path: C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer
+2022-04-03 23:26:33.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - -
+2022-04-03 23:26:33.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-04-03 23:26:33.293 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - - - 301 - - 71.4600ms
+2022-04-03 23:26:33.484 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 201.3062ms
+2022-04-03 23:26:33.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - -
+2022-04-03 23:26:33.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - -
+2022-04-03 23:26:33.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-04-03 23:26:33.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 23:26:33.514 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 8.5869ms
+2022-04-03 23:26:33.528 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 23:26:33.528 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 23:26:33.532 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - - - 200 142933 text/css 38.9803ms
+2022-04-03 23:26:33.536 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 43.3678ms
+2022-04-03 23:26:33.558 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 23:26:33.575 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 82.7327ms
+2022-04-03 23:26:34.477 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - -
+2022-04-03 23:26:34.527 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - - - 404 - - 49.5700ms
+2022-04-03 23:26:34.750 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - -
+2022-04-03 23:26:34.754 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.2566ms
+2022-04-03 23:26:35.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - -
+2022-04-03 23:26:35.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 145.9970ms
+2022-04-03 23:27:20.480 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 72
+2022-04-03 23:27:20.491 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:27:20.519 +05:30 [INF] Route matched with {action = "Post", controller = "ProductCatalog"}. Executing controller action with signature System.Net.Http.HttpResponseMessage Post(DomainLayer.Product) on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:27:21.011 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:27:21.564 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([description], [model], [name], [price])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+2022-04-03 23:27:21.608 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Net.Http.HttpResponseMessage'.
+2022-04-03 23:27:21.631 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.Post (APILayer) in 1106.666ms
+2022-04-03 23:27:21.632 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.Post (APILayer)'
+2022-04-03 23:27:21.635 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44364/api/ProductCatalog application/json 72 - 200 - application/json;+charset=utf-8 1154.6157ms
+2022-04-03 23:27:28.516 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/api/ProductCatalog - -
+2022-04-03 23:27:28.517 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:27:28.519 +05:30 [INF] Route matched with {action = "GetAll", controller = "ProductCatalog"}. Executing controller action with signature System.Collections.IEnumerable GetAll() on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:27:28.545 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:27:28.703 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[id], [p].[description], [p].[model], [p].[name], [p].[price]
+FROM [Products] AS [p]
+2022-04-03 23:27:28.708 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DomainLayer.Product, DomainLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-04-03 23:27:28.710 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.GetAll (APILayer) in 191.0007ms
+2022-04-03 23:27:28.710 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:27:28.711 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/api/ProductCatalog - - - 200 - application/json;+charset=utf-8 194.2286ms
+2022-04-03 23:28:03.992 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 23:28:04.013 +05:30 [INF] Hosting environment: Development
+2022-04-03 23:28:04.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - -
+2022-04-03 23:28:04.014 +05:30 [INF] Content root path: C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer
+2022-04-03 23:28:04.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-04-03 23:28:04.160 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - - - 301 - - 146.5261ms
+2022-04-03 23:28:04.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 220.1722ms
+2022-04-03 23:28:04.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - -
+2022-04-03 23:28:04.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - -
+2022-04-03 23:28:04.375 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-04-03 23:28:04.375 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 23:28:04.390 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 11.0511ms
+2022-04-03 23:28:04.414 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 23:28:04.414 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 23:28:04.414 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 23:28:04.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - - - 200 142933 text/css 41.8937ms
+2022-04-03 23:28:04.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 45.0882ms
+2022-04-03 23:28:04.454 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 80.0411ms
+2022-04-03 23:28:04.696 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - -
+2022-04-03 23:28:04.725 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - - - 404 - - 28.6682ms
+2022-04-03 23:28:04.885 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - -
+2022-04-03 23:28:04.889 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 3.0293ms
+2022-04-03 23:28:05.117 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - -
+2022-04-03 23:28:05.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.7174ms
+2022-04-03 23:30:51.250 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-03 23:30:51.289 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger - -
+2022-04-03 23:30:51.293 +05:30 [INF] Hosting environment: Development
+2022-04-03 23:30:51.295 +05:30 [INF] Content root path: C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer
+2022-04-03 23:30:51.377 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-04-03 23:30:51.385 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger - - - 301 - - 98.1467ms
+2022-04-03 23:30:51.586 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 208.7878ms
+2022-04-03 23:30:51.591 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - -
+2022-04-03 23:30:51.591 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - -
+2022-04-03 23:30:51.591 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - -
+2022-04-03 23:30:51.592 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-04-03 23:30:51.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 20.5790ms
+2022-04-03 23:30:51.656 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-04-03 23:30:51.656 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-04-03 23:30:51.657 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui.css - - - 200 142933 text/css 66.1350ms
+2022-04-03 23:30:51.662 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-04-03 23:30:51.662 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 71.2855ms
+2022-04-03 23:30:51.677 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 85.9616ms
+2022-04-03 23:30:51.963 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - -
+2022-04-03 23:30:51.989 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-bundle.js.map - - - 404 - - 25.5236ms
+2022-04-03 23:30:52.432 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - -
+2022-04-03 23:30:52.434 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:44364/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 1.7015ms
+2022-04-03 23:30:52.935 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - -
+2022-04-03 23:30:53.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.5080ms
+2022-04-03 23:30:58.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44364/api/ProductCatalog - -
+2022-04-03 23:30:58.490 +05:30 [INF] Executing endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:30:58.512 +05:30 [INF] Route matched with {action = "GetAll", controller = "ProductCatalog"}. Executing controller action with signature System.Collections.IEnumerable GetAll() on controller APILayer.Controllers.ProductCatalogController (APILayer).
+2022-04-03 23:30:59.003 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-03 23:30:59.536 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[id], [p].[description], [p].[model], [p].[name], [p].[price]
+FROM [Products] AS [p]
+2022-04-03 23:30:59.588 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DomainLayer.Product, DomainLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-04-03 23:30:59.601 +05:30 [INF] Executed action APILayer.Controllers.ProductCatalogController.GetAll (APILayer) in 1085.0491ms
+2022-04-03 23:30:59.602 +05:30 [INF] Executed endpoint 'APILayer.Controllers.ProductCatalogController.GetAll (APILayer)'
+2022-04-03 23:30:59.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44364/api/ProductCatalog - - - 200 - application/json;+charset=utf-8 1123.1733ms

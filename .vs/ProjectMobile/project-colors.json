@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f6e05f58-c03a-47a9-b022-b0c9e08073a2": {
+      "ProjectGuid": "f6e05f58-c03a-47a9-b022-b0c9e08073a2",
+      "DisplayName": "APILayer",
+      "ColorIndex": 0
+    },
+    "da283d2b-ccda-4632-ac25-cb458afc06d7": {
+      "ProjectGuid": "da283d2b-ccda-4632-ac25-cb458afc06d7",
+      "DisplayName": "UILayer",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
