@@ -11,8 +11,8 @@ namespace RepositoryLayer
     public class GenericRepositoryOperation<T> : IGenericRepositoryOperation<T> where T : class 
     {
 
-        DbContext _Context;
-        readonly DbSet<T> _dbset;
+        private readonly DbContext _Context;
+        private readonly DbSet<T> _dbset;
         public GenericRepositoryOperation(DbContext product)
         {
             _Context = product;

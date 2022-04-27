@@ -1,4 +1,6 @@
 ﻿using DomainLayer;
+using DomainLayer.Users;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,12 +10,15 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer
 {
-    public class ProductDbContext:DbContext
+    public class ProductDbContext: IdentityDbContext<ApplicationUser>
     {
         public ProductDbContext(DbContextOptions<ProductDbContext>options):base(options)
         {
 
         }
-        public DbSet<Product> Products { get; set; }    
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Registration> Register { get; set; }
+        public DbSet<ApplicationUser> applicationUsers { get; set; }
+        public DbSet<Login> Login { get; set; }
     }
 }

@@ -34,3 +34,21 @@ C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\RepositoryLayer\obj\Deb
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\RepositoryLayer\obj\Debug\net5.0\ref\RepositoryLayer.dll
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.pdb
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.genruntimeconfig.cache
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.deps.json
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.runtimeconfig.json
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.runtimeconfig.dev.json
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.dll
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\ref\RepositoryLayer.dll
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\RepositoryLayer.pdb
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\DomainLayer.dll
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\bin\Debug\net5.0\DomainLayer.pdb
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.csproj.AssemblyReference.cache
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.AssemblyInfoInputs.cache
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.AssemblyInfo.cs
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.csproj.CopyComplete
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.dll
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\ref\RepositoryLayer.dll
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.pdb
+D:\Final DemoProject\EcommerceApp\RepositoryLayer\obj\Debug\net5.0\RepositoryLayer.genruntimeconfig.cache

@@ -22,3 +22,15 @@ C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\DomainLayer\obj\Debug\n
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
+D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.deps.json
+D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.dll
+D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\ref\DomainLayer.dll
+D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.pdb
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfoInputs.cache
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfo.cs
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.CoreCompileInputs.cache
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache

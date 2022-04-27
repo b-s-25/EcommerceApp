@@ -16,8 +16,8 @@ namespace APILayer.Controllers
     public class ProductCatalogController : ControllerBase
     {
         private readonly ILogger<ProductCatalogController> _logger;
-        ProductDbContext _Context;
-        IProductCatalog _Catalog;
+        private readonly ProductDbContext _Context;
+        private readonly IProductCatalog _Catalog;
         
         
         public ProductCatalogController(ProductDbContext Context,ILogger<ProductCatalogController>logger)
@@ -26,6 +26,7 @@ namespace APILayer.Controllers
             _Context = Context;
             _Catalog = new ProductCatalog(_Context);
         }
+        
         [HttpGet]
         public IEnumerable GetAll()
         {
