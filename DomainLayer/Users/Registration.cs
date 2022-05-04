@@ -28,6 +28,11 @@ namespace DomainLayer.Users
         [DataType(DataType.Password)]
         [RegularExpression("[^ ]{8,16}", ErrorMessage = "Password should contain a minimum of 8 characters and a capital letter")]
         public string password { get; set; }
+       /* [Required(ErrorMessage = "*Password is required")]
+        [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
+        [Compare("password")]
+        public string confirmPassword { get; set; }*/
         public bool isActive { get; set; }
         [Column("CreatedOn")]
         public DateTime createdOn { get; set; }

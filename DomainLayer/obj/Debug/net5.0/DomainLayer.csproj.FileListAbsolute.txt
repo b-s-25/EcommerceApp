@@ -33,4 +33,3 @@ D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.cspro
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
-D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache

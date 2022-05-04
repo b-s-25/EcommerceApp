@@ -68,8 +68,6 @@ namespace APILayer.Controllers
                 }
             }
             catch (Exception ex) 
-
-
             {
                 _logger.LogInformation("error");
                 _logger.LogError("error");

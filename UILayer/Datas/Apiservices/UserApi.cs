@@ -18,6 +18,7 @@ namespace UILayer.Datas.Apiservices
         {
         }
         public bool UserRegister(RegistrationView user)
+        //public bool UserRegister(Registration user)
         {
             using (HttpClient httpclient = new HttpClient())
             {
@@ -35,6 +36,7 @@ namespace UILayer.Datas.Apiservices
         }
 
         public bool UserLogin(LoginView userLogin)
+        //public bool UserLogin(Login userLogin)
         {
             using (HttpClient httpclient = new HttpClient())
             {

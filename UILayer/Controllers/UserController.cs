@@ -38,6 +38,7 @@ namespace UILayer.Controllers
 
         [HttpPost]
         public IActionResult UserRegister(RegistrationView registrationView)
+        //public IActionResult UserRegister(Registration registrationView)
         {
             _userApi.UserRegister(registrationView);
             return RedirectToAction("Index");
@@ -52,8 +53,10 @@ namespace UILayer.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginView loginView)
+        //public async Task<IActionResult> Login(Login loginView)
         {
             LoginView userLogin = new LoginView();
+            //Login userLogin = new Login();
             _registration = _userApi.GetUserInfo().Where(register => register.email == loginView.username).FirstOrDefault();
             userLogin = loginView;
             bool check = _userApi.UserLogin(loginView);

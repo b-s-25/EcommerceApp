@@ -149,13 +149,6 @@ C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer\bin\Debug\net5
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
 C:\Users\DELL\Downloads\ProjectMobileBIBIN\ProjectMobile\APILayer\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.csproj.AssemblyReference.cache
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.GeneratedMSBuildEditorConfig.editorconfig
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.AssemblyInfoInputs.cache
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.AssemblyInfo.cs
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.csproj.CoreCompileInputs.cache
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.MvcApplicationPartsAssemblyInfo.cs
-D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.MvcApplicationPartsAssemblyInfo.cache
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\NOTICE.TXT
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\appsettings.Development.json
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\appsettings.json
@@ -172,6 +165,7 @@ D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\NPOI.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Humanizer.dll
+D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Microsoft.Azure.Services.AppAuthentication.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
@@ -230,6 +224,13 @@ D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\RepositoryLayer.dll
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\BusinesLogic.pdb
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\DomainLayer.pdb
 D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\RepositoryLayer.pdb
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.csproj.AssemblyReference.cache
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.AssemblyInfoInputs.cache
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.AssemblyInfo.cs
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.csproj.CoreCompileInputs.cache
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.MvcApplicationPartsAssemblyInfo.cs
+D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.MvcApplicationPartsAssemblyInfo.cache
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\scopedcss\bundle\APILayer.styles.css
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\staticwebassets\APILayer.StaticWebAssets.Manifest.cache
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.RazorTargetAssemblyInfo.cache
@@ -238,4 +239,3 @@ D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.dll
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\ref\APILayer.dll
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.pdb
 D:\Final DemoProject\EcommerceApp\APILayer\obj\Debug\net5.0\APILayer.genruntimeconfig.cache
-D:\Final DemoProject\EcommerceApp\APILayer\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
