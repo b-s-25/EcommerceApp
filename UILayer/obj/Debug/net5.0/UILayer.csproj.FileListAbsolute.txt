@@ -360,3 +360,5 @@ D:\Final DemoProject\EcommerceApp\UILayer\bin\Debug\net5.0\BusinesLogic.pdb
 D:\Final DemoProject\EcommerceApp\UILayer\bin\Debug\net5.0\RepositoryLayer.pdb
 D:\Final DemoProject\EcommerceApp\UILayer\obj\Debug\net5.0\UILayer.MvcApplicationPartsAssemblyInfo.cs
 D:\Final DemoProject\EcommerceApp\UILayer\obj\Debug\net5.0\Razor\Views\User\UserRegister.cshtml.g.cs
+D:\Final DemoProject\EcommerceApp\UILayer\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+D:\Final DemoProject\EcommerceApp\UILayer\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs

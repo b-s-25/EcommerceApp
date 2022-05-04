@@ -1,11 +1,17 @@
-﻿using DomainLayer.DTO;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using DomainLayer.DTO;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using UILayer.Datas.Apiservices;
+using DomainLayer.Users;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UILayer.Controllers
 {
@@ -13,6 +19,7 @@ namespace UILayer.Controllers
     {
         private UserApi _userApi;
         private IConfiguration _configuration;
+        private Registration _registration;
         public UserController(IConfiguration configuration)
         {
             _userApi = new UserApi(_configuration);
@@ -33,7 +40,44 @@ namespace UILayer.Controllers
         public IActionResult UserRegister(RegistrationView registrationView)
         {
             _userApi.UserRegister(registrationView);
-            return View("Index");
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Login(string loginUrl)
+        {
+            ViewData["LoginUrl"] = loginUrl;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginView loginView)
+        {
+            LoginView userLogin = new LoginView();
+            _registration = _userApi.GetUserInfo().Where(register => register.email == loginView.username).FirstOrDefault();
+            userLogin = loginView;
+            bool check = _userApi.UserLogin(loginView);
+            if (_registration != null)
+            {
+                var claims = new List<Claim>();
+
+                claims.Add(new Claim("password", loginView.password));
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, loginView.username));
+                claims.Add(new Claim(ClaimTypes.Name, loginView.username));
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                await HttpContext.SignInAsync(claimsPrincipal);
+                return RedirectToAction("Index");
+            }
+            TempData["Error"] = "Invalid Email or Password";
+            return View("Login");
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return Redirect("/");
         }
     }
 }

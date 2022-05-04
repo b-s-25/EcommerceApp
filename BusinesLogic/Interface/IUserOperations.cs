@@ -1,4 +1,5 @@
-﻿using DomainLayer.Users;
+﻿using DomainLayer;
+using DomainLayer.Users;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace BusinesLogic.Interface
         Task<Registration> Authenticate(string username, string password);
         Task Edit(Registration user);
         Task<string> Userlogin(Login login);
+        Task<List<ApplicationUser>> GetUser();
     }
 }

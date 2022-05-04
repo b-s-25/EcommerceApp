@@ -1,7 +1,9 @@
 ﻿using APILayer.Models;
 using BusinesLogic.Interface;
+using DomainLayer;
 using DomainLayer.Users;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -17,11 +19,14 @@ namespace APILayer.Controllers
     {
         private readonly IUserOperations _userOperations;
         private readonly ILogger<UserController> _logger;
-        public UserController(IUserOperations userOperations, ILogger<UserController> logger)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public UserController(IUserOperations userOperations, ILogger<UserController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _logger = logger;
             _userOperations = userOperations;
-           
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [HttpPost("SignUp")]
@@ -62,12 +67,19 @@ namespace APILayer.Controllers
                     return Ok(new UserResponse<string> { status = "Success", message = "Login Successfull" ,token = result });
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) 
+
+
             {
                 _logger.LogInformation("error");
                 _logger.LogError("error");
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
+        }
+        [HttpGet("GetUser")]
+        public  IEnumerable<ApplicationUser> GetUser()
+        {
+            return _userOperations.GetUser().Result;
         }
     }
 }

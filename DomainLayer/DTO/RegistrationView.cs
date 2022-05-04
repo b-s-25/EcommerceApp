@@ -30,6 +30,7 @@ namespace DomainLayer.DTO
         [Required(ErrorMessage = "*Confirm Password is required")]
         [Compare(nameof(password), ErrorMessage = "*Password should match with Confirm Password")]    
         [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
         public string confirmPassword { get; set; }
     }
 }

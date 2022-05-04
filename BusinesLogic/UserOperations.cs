@@ -91,5 +91,12 @@ namespace BusinesLogic
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public async Task<List<ApplicationUser>> GetUser()
+        {
+            //return _repositoryOperation.GetAll();
+            var users = _userManager.Users.ToList();
+            return users;
+        }
     }
 }
