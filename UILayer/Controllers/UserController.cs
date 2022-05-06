@@ -38,10 +38,10 @@ namespace UILayer.Controllers
 
         [HttpPost]
         public IActionResult UserRegister(RegistrationView registrationView)
-        //public IActionResult UserRegister(Registration registrationView)
+        //public IActionResult UserRegister(Registration registration)
         {
             _userApi.UserRegister(registrationView);
-            return RedirectToAction("Index");
+            return RedirectToAction("Login");
         }
 
         [HttpGet]
