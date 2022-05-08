@@ -8705,19 +8705,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ageorge\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\APILayer\\APILayer.csproj",
+      "projectUniqueName": "C:\\NewProject\\EcommerceApp\\APILayer\\APILayer.csproj",
       "projectName": "APILayer",
-      "projectPath": "D:\\Final DemoProject\\EcommerceApp\\APILayer\\APILayer.csproj",
-      "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
-      "outputPath": "D:\\Final DemoProject\\EcommerceApp\\APILayer\\obj\\",
+      "projectPath": "C:\\NewProject\\EcommerceApp\\APILayer\\APILayer.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\NewProject\\EcommerceApp\\APILayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8731,14 +8731,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Final DemoProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {
-              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj"
+            "C:\\NewProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {
+              "projectPath": "C:\\NewProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj"
             },
-            "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
+            "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
             },
-            "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }
@@ -8822,6 +8822,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8830,7 +8836,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
