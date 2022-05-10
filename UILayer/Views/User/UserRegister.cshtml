@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "UserRegister";
 }
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+@*<script src="~/Scripts/jquery-3.4.1.min.js"></script>*@
+
+
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <div class="container" style="margin-top: 10%; width: 100%; position: relative; left: 23%;">
@@ -47,26 +49,66 @@
                             <span asp-validation-for="confirmPassword" class="text-danger"></span>
                         </div>
                     </div>
+                    @*<div class="form-group">
+                            <div class="input-group">
+                                <input class="btn btn-info form-control" type="submit" value="Register" />
+                            </div>
+                        </div>*@
                     <div class="form-group">
-                        <div class="input-group">
-                            <input class="btn btn-info form-control" type="submit" value="Register" />
-                        </div>
+                        <button class="btn btn-info form-control" id="submit" type="submit" onclick="SaveForm()"><i class="glyphicon glyphicon-registration-mark"></i> Submit </button>
                     </div>
-
                 </form>
             </div>
             <div class="col">
-            <a style="padding:0px;cursor:pointer;color:unset;" onclick="SignIn()" asp-action="Login">Already a User? Click here to Login  </a>
+                <a style="padding:0px;cursor:pointer;color:unset;" onclick="SignIn()" asp-action="Login">Already a User? Click here to Login  </a>
+            </div>
         </div>
-        </div>
-        
+
     </div>
 </div>
-<script>
-    function SignIn() {
+@*<script>
+        function SignIn() {
 
-    }
+        }
+    </script>*@
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.0.js">
+    </script>
+
+<script type="text/javascript">
+    $(() => {
+        $(document).ready(function () {
+            $("#submit").click(function (e) {
+                e.preventDefault();
+                var data = $("#RegistrationForm")
+                console.log(data);
+                //alert(data);
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/User/UserRegister',
+
+                    data: data.serialize(),
+                    success: function (result) {
+                        alert('Successfully Registered ');
+                        document.getElementById('RegistrationForm').reset();
+
+                    },
+                    error: function () {
+                        alert('Failed to receive the Data');
+                        console.log('Failed ');
+                    }
+                });
+            });
+        });
+    });
+
 </script>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

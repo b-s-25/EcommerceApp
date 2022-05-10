@@ -41,7 +41,7 @@ namespace UILayer.Controllers
         //public IActionResult UserRegister(Registration registration)
         {
             _userApi.UserRegister(registrationView);
-            return RedirectToAction("Login");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
