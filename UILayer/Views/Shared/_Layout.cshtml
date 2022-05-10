@@ -24,21 +24,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserRegister">Register</a>
+                        </li>
                     </ul>
-                    <div>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <a class="mr-3">Cart</a>
-                        <i class="fa-solid fa-user"></i>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <a asp-controller="User" asp-action="Account"> Welcome @User.Identity.Name </a>
-                            <a asp-controller="User" asp-action="Logout">Logout</a>
-                        }
-                        else
-                        {
-                            <a asp-action="Login">Account</a>
-                        }
-                    </div>
+
                 </div>
             </div>
         </nav>

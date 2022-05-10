@@ -28,6 +28,12 @@ namespace UILayer
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
             {
                 options.LoginPath = "/login";
+                options.Events = new CookieAuthenticationEvents()
+                {
+                    OnSigningIn = async context => { await Task.CompletedTask; },
+                    OnSignedIn = async context => { await Task.CompletedTask; },
+                    OnValidatePrincipal = async context => { await Task.CompletedTask; }
+                };
             });
         }
 

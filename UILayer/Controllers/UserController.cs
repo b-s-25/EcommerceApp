@@ -80,7 +80,7 @@ namespace UILayer.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return Redirect("/");
+            return Redirect("Login");
         }
     }
 }

@@ -10405,19 +10405,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\ageorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NewProject\\EcommerceApp\\UILayer\\UILayer.csproj",
+      "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\UILayer\\UILayer.csproj",
       "projectName": "UILayer",
-      "projectPath": "C:\\NewProject\\EcommerceApp\\UILayer\\UILayer.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\NewProject\\EcommerceApp\\UILayer\\obj\\",
+      "projectPath": "D:\\Final DemoProject\\EcommerceApp\\UILayer\\UILayer.csproj",
+      "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
+      "outputPath": "D:\\Final DemoProject\\EcommerceApp\\UILayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10431,11 +10431,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\NewProject\\EcommerceApp\\APILayer\\APILayer.csproj": {
-              "projectPath": "C:\\NewProject\\EcommerceApp\\APILayer\\APILayer.csproj"
+            "D:\\Final DemoProject\\EcommerceApp\\APILayer\\APILayer.csproj": {
+              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\APILayer\\APILayer.csproj"
             },
-            "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
+            "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
             }
           }
         }
@@ -10485,12 +10485,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10499,7 +10493,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

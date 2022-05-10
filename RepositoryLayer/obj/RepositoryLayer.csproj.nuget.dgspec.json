@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {}
+    "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {}
   },
   "projects": {
-    "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+    "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+        "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
         "projectName": "DomainLayer",
-        "projectPath": "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\NewProject\\EcommerceApp\\DomainLayer\\obj\\",
+        "projectPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+        "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
+        "outputPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\NewProject\\EcommerceApp\\RepositoryLayer\\obj\\",
+        "projectPath": "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
+        "outputPath": "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +96,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
-                "projectPath": "C:\\NewProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
+              "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+                "projectPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
               }
             }
           }
@@ -164,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
