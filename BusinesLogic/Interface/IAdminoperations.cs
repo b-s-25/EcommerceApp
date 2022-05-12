@@ -11,6 +11,7 @@ namespace BusinesLogic.Interface
     {
         IEnumerable<Registration> GetUserData();
         void Add(Registration entity);
+        Registration Authenticate(string username, string password);
 
     }
 }

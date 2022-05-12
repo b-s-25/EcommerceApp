@@ -22,15 +22,19 @@ namespace BusinesLogic
 
         }
 
-       
+
         public void Add(Registration entity)
         {
-          _repositoryOperation.Add(entity);
+            _repositoryOperation.Add(entity);
         }
 
-        public IEnumerable<Registration> GetAll()
+        public Registration Authenticate(string username, string password)
         {
-            throw new NotImplementedException();
+            Registration registration = new Registration();
+            var list = _repositoryOperation.GetAll();
+            var user = list.FirstOrDefault(users => users.email == username && users.password == password);
+
+            return user;
         }
 
         public IEnumerable<Registration> GetUserData()

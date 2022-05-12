@@ -193,6 +193,9 @@ namespace RepositoryLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("roleId")
+                        .HasColumnType("int");
+
                     b.HasKey("registrationId");
 
                     b.ToTable("Register");

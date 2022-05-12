@@ -499,3 +499,66 @@ SELECT [MigrationId], [ProductVersion]
 FROM [__EFMigrationsHistory]
 ORDER BY [MigrationId];
 2022-04-27 11:08:47.364 +05:30 [INF] No migrations were applied. The database is already up to date.
+2022-05-11 14:19:06.455 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-11 14:19:06.692 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:19:06.713 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:19:06.715 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:19:06.716 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:19:06.746 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-11 14:19:06.811 +05:30 [INF] Applying migration '20220505170920_adminlogin'.
+2022-05-11 14:19:07.012 +05:30 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Adminlogin] (
+    [loginId] int NOT NULL IDENTITY,
+    [username] nvarchar(max) NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    [createdOn] datetime2 NOT NULL,
+    [createdBy] nvarchar(max) NULL,
+    [modifiedOn] datetime2 NOT NULL,
+    [modifiedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Adminlogin] PRIMARY KEY ([loginId])
+);
+2022-05-11 14:19:07.025 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220505170920_adminlogin', N'5.0.0');
+2022-05-11 14:20:32.695 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-11 14:20:46.146 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-11 14:21:01.157 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-11 14:21:01.318 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:21:01.337 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:21:01.339 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:21:01.340 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:21:01.345 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-11 14:21:01.357 +05:30 [INF] Applying migration '20220511085046_roleid'.
+2022-05-11 14:21:01.545 +05:30 [INF] Executed DbCommand (165ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Register] ADD [roleId] int NOT NULL DEFAULT 0;
+2022-05-11 14:21:01.545 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220511085046_roleid', N'5.0.0');
+2022-05-11 14:33:27.873 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'ProductDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-11 14:33:28.034 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:33:28.054 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:33:28.056 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-11 14:33:28.057 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-11 14:33:28.062 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-11 14:33:28.073 +05:30 [INF] No migrations were applied. The database is already up to date.

@@ -1,7 +1,9 @@
 ﻿using APILayer.Models;
 using BusinesLogic.Interface;
 using DomainLayer;
+using DomainLayer.DTO;
 using DomainLayer.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -48,16 +50,19 @@ namespace APILayer.Controllers
             {
                 _logger.LogInformation("error");
                 _logger.LogError("error");
-                return StatusCode(StatusCodes.Status400BadRequest);
+                return StatusCode(StatusCodes.Status400BadRequest, ex);
             }
         }
 
         [HttpPost("SignIn")]
-        public async Task<IActionResult> SignIn([FromBody] Login login)
+        public async Task<IActionResult> SignIn([FromBody] LoginView login)
         {
             try
             {
-                var result = await _userOperations.Userlogin(login);
+                Login loginData = new Login();
+                loginData.username = login.username;
+                loginData.password = login.password;
+                var result = await _userOperations.Userlogin(loginData);
                 if (string.IsNullOrEmpty(result))
                 {
                     return StatusCode(StatusCodes.Status401Unauthorized, new UserResponse<string> { status = "Error", message = "Login failed, please try again. If not registered, please Register to order your product" });
@@ -71,13 +76,28 @@ namespace APILayer.Controllers
             {
                 _logger.LogInformation("error");
                 _logger.LogError("error");
-                return StatusCode(StatusCodes.Status400BadRequest);
+                return StatusCode(StatusCodes.Status400BadRequest, ex);
             }
         }
         [HttpGet("GetUser")]
         public  IEnumerable<ApplicationUser> GetUser()
         {
             return _userOperations.GetUser().Result;
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgetPassword()
+        {
+            try
+            {
+                return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error to reset password", ex);
+                return StatusCode(StatusCodes.Status400BadRequest);
+            }
         }
     }
 }

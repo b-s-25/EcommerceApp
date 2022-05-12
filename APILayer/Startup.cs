@@ -46,8 +46,9 @@ namespace APILayer
             });
             services.AddDbContext<ProductDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped(typeof(IProductCatalog),typeof(ProductCatalog));
-            services.AddScoped(typeof(IUserOperations), typeof(UserOperations));
+            //services.AddScoped(typeof(IUserOperations), typeof(UserOperations));
             services.AddTransient<IUserOperations, UserOperations>();
+            services.AddTransient<IAdminoperations, Adminoperations>();
             //for identity
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ProductDbContext>().AddDefaultTokenProviders();
 

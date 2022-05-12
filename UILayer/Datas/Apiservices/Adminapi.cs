@@ -6,10 +6,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using UILayer.Datas.Apiservices.Interface;
 
 namespace UILayer.Datas.Apiservices
 {
-    public class Adminapi
+    public class Adminapi:IAdminapi
     {
         public IEnumerable<Registration> GetUserInfo()
         {
@@ -31,13 +32,13 @@ namespace UILayer.Datas.Apiservices
             }
         }
         public bool AdminLogin(LoginView AdminLogin)
-       
+
         {
             using (HttpClient httpclient = new HttpClient())
             {
                 string data = Newtonsoft.Json.JsonConvert.SerializeObject(AdminLogin);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                string url = "https://localhost:44364/api/Admin/post";
+                string url = "https://localhost:44364/api/Admin/Login";
                 Uri uri = new Uri(url);
                 System.Threading.Tasks.Task<HttpResponseMessage> result = httpclient.PostAsync(uri, content);
                 if (result.Result.StatusCode == System.Net.HttpStatusCode.OK)

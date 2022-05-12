@@ -1,5 +1,6 @@
 ﻿using BusinesLogic;
 using BusinesLogic.Interface;
+using DomainLayer.DTO;
 using DomainLayer.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,40 +19,26 @@ namespace APILayer.Controllers.Admin
     {
         private readonly ILogger<AdminController> _logger;
         //private readonly ProductDbContext _Context;
-        private readonly IAdminoperations _AdminCatalog;
-        public AdminController(ILogger<AdminController> logger, IAdminoperations AdminCatalog)
+        private readonly IAdminoperations _adminoperations;
+        public AdminController(ILogger<AdminController> logger, IAdminoperations adminoperations)
         {
             _logger = logger;
 
-            _AdminCatalog = AdminCatalog;
+            _adminoperations = adminoperations;
         }
-       
-
-        [HttpGet]
-        public IEnumerable<Registration> GetAll()
-        {
-
-            try
-            {
-                var products = _AdminCatalog.GetUserData();
-
-                return products;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error message");
-                return null;
 
 
-            }
-        }
-        [HttpPost]
-        public HttpResponseMessage Post([FromBody] Registration registration)
+        [HttpPost("Login")]
+        public HttpResponseMessage Login([FromBody] LoginView login)
         {
             try
             {
-                _AdminCatalog.Add(registration);
-                return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+                var result = _adminoperations.Authenticate(login.username, login.password);
+                if (result.roleId == 2)
+                {
+                    return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+                }
+                return new HttpResponseMessage(System.Net.HttpStatusCode.BadRequest);
 
             }
             catch (Exception ex)

@@ -14,16 +14,17 @@
                 </li>
                 @*<li><a asp-controller="user" asp-action="userregister">Register</a></li>*@
 
-                <li class="nav-item">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <a class="nav-link text-dark" style="padding: 0.12rem 1rem; color: #0d6efd" asp-controller="User" asp-action="Logout">Logout</a>
-                    }
-                    else
-                    {
-                        <a class="nav-link text-dark" style="padding: 0.12rem 1rem; color: dodgerblue" asp-area="" asp-controller="User" asp-action="Login">Login</a>
-                    }
-                </li>
+            <li class="nav-item">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link text-dark" style="padding: 0.12rem 1rem;" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+                    <a class="nav-link text-dark" style="padding: 0.12rem 1rem" asp-controller="User" asp-action="account">@User.Identity.Name </a>
+                }
+                else
+                {
+                    <a class="nav-link text-dark" style="padding: 0.12rem 1rem; color: dodgerblue" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                }
+            </li>
 
                 <li><a href=" ">Account</a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>

@@ -60,7 +60,7 @@ namespace UILayer.Controllers
             _registration = _userApi.GetUserInfo().Where(register => register.email == loginView.username).FirstOrDefault();
             userLogin = loginView;
             bool check = _userApi.UserLogin(loginView);
-            if (_registration != null)
+            if (check)
             {
                 var claims = new List<Claim>();
 
@@ -72,7 +72,7 @@ namespace UILayer.Controllers
                 await HttpContext.SignInAsync(claimsPrincipal);
                 return RedirectToAction("Index");
             }
-            TempData["Error"] = "Invalid Email or Password";
+            TempData["Error"] = "*Invalid Email or Password";
             return View("Login");
         }
 
@@ -81,6 +81,13 @@ namespace UILayer.Controllers
         {
             await HttpContext.SignOutAsync();
             return Redirect("Login");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgetPassword()
+        {
+            return View();
         }
     }
 }

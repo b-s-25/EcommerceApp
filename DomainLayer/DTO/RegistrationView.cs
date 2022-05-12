@@ -19,7 +19,7 @@ namespace DomainLayer.DTO
         [Display(Name = "Last Name")]
         public string lastName { get; set; }
         [Required(ErrorMessage = "*Email Address is required")]
-        [EmailAddress(ErrorMessage = "*Email address should be in the format adc@domain.com")]
+        [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z\s]+\.[a-zA-Z\s.]+$", ErrorMessage = "*Email address should be in the format adc@domain.com")]
         [Display(Name = "Email")]
         public string email { get; set; }
         [Required(ErrorMessage = "*Password is required")]
