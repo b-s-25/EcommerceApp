@@ -26,7 +26,6 @@ D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.deps.
 D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\ref\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\bin\Debug\net5.0\DomainLayer.pdb
-D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfoInputs.cache
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.AssemblyInfo.cs
@@ -34,3 +33,4 @@ D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.cspro
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\ref\DomainLayer.dll
 D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.pdb
+D:\Final DemoProject\EcommerceApp\DomainLayer\obj\Debug\net5.0\DomainLayer.csproj.AssemblyReference.cache

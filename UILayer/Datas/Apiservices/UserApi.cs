@@ -79,7 +79,25 @@ namespace UILayer.Datas.Apiservices
 {
                 string data = Newtonsoft.Json.JsonConvert.SerializeObject(userInfo);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                string url = "https://localhost:44364/api/User/SignUp";
+                string url = "https://localhost:44364/api/User/EditUser";
+                Uri uri = new Uri(url);
+                System.Threading.Tasks.Task<HttpResponseMessage> result = httpclient.PutAsync(uri, content);
+                if (result.Result.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
+        public bool ForgotPassword(Registration resetPassword)
+        {
+            using (HttpClient httpclient = new HttpClient())
+            {
+                string data = Newtonsoft.Json.JsonConvert.SerializeObject(resetPassword);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                string url = "https://localhost:44364/api/User/ForgetPassword";
                 Uri uri = new Uri(url);
                 System.Threading.Tasks.Task<HttpResponseMessage> result = httpclient.PutAsync(uri, content);
                 if (result.Result.IsSuccessStatusCode)

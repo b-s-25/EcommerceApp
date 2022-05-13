@@ -13,7 +13,6 @@ namespace DomainLayer.DTO
         public int loginId { get; set; }
         [Required(ErrorMessage = "*Username is required")]
         [Display(Name = "Username")]
-        [EmailAddress(ErrorMessage = "*Username should be in the format adc@domain.com")]
         public string username { get; set; }
         [Required(ErrorMessage = "*Password is required")]
         [Display(Name = "Password")]

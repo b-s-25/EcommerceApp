@@ -87,11 +87,25 @@ namespace APILayer.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult ForgetPassword()
+        public IActionResult ForgotPassword()
         {
             try
             {
                 return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error to reset password", ex);
+                return StatusCode(StatusCodes.Status400BadRequest);
+            }
+        }
+        [HttpPut("EditUser")]
+        public IActionResult EditUser(Registration updateUser)
+        {
+            try
+            {
+                var result = _userOperations.Edit(updateUser);
+                return StatusCode(StatusCodes.Status200OK, result);
             }
             catch (Exception ex)
             {

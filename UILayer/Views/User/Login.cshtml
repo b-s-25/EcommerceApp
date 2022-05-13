@@ -1,6 +1,7 @@
 ﻿@model DomainLayer.DTO.LoginView
 @{
     ViewData["Title"] = "Login";
+    Layout = null;
 }
 @{
     @*var loginUrl = ViewData["LoginUrl"] as string;*@
@@ -36,7 +37,7 @@
                 </div>
             </form>
             <div class="form-group">
-                <a style="float:left">Forget Password?</a>
+                <a style="float:left" asp-action="ForgetPassword">Forgot Password?</a>
                 <a style="float:right;cursor:pointer;color:unset;" onclick="SignUp()" asp-action="UserRegister"> Sign Up </a>
             </div>
 

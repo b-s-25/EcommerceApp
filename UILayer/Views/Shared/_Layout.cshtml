@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/UserNavbar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
+
 <body>
     @*<header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -40,29 +42,28 @@
             <a href="#"><img src="~/Images/MobiZone-logos_black.png" /> <span>MobiZone</span> </a>
         </h2>
         <nav>
-            <ul>
-                <li class="search">
-                    <input type="text">
-                    <button>search</button>
-                </li>
-                <li><a asp-controller="user" asp-action="userregister">Register</a></li>
+            <div class="user-nav">
+                <input type="text" class="srch">
+                <button>search</button>
 
-                <li class="nav-item">
-                    @if (User.Identity.IsAuthenticated)
-                    {
+                <a class="nav-register register" asp-controller="user" asp-action="userregister">Register</a>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="nav-logout">
                         <a class="nav-link text-dark" style="padding: 0.12rem 1rem;" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
                         <a class="nav-link text-dark" style="padding: 0.12rem 1rem" asp-controller="User" asp-action="account">@User.Identity.Name </a>
-                    }
-                    else
-                    {
-                        <a class="nav-link text-dark" style="padding: 0.12rem 1rem; color: dodgerblue" asp-area="" asp-controller="User" asp-action="Login">Login</a>
-                    }
-                </li>
+                    </div>
+                }
+                else
+                {
+                    <a class="nav-link text-dark" style="padding: 0.12rem 1rem; color: dodgerblue" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                }
 
-                <li><a href=" ">Account</a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
 
+                <a href=" ">Account</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
         </nav>
     </header>
     <div class="container">

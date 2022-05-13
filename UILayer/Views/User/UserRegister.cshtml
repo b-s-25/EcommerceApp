@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "UserRegister";
+    Layout = "/Views/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -55,7 +56,7 @@
                 </form>
             </div>
             <div class="col">
-                <a style="padding: 63px; cursor: pointer; color: unset;" onclick="SignIn()" asp-action="Login">Already a User? Click here to Login  </a>
+                <a style="padding: 48px; cursor: pointer; color: unset;" onclick="SignIn()" asp-action="Login">Already a User? Click here to Login  </a>
             </div>
         </div>
 

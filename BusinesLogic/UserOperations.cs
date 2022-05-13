@@ -13,12 +13,15 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
+using DomainLayer.DTO;
+using Microsoft.Extensions.Options;
 
 namespace BusinesLogic
 {
     public class UserOperations : IUserOperations
     {
         private readonly IGenericRepositoryOperation<Registration> _repositoryOperation;
+        private readonly IGenericRepositoryOperation<ForgetPasswordView> _forgetPasswordView;
         private readonly ProductDbContext _dbContext;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -27,6 +30,7 @@ namespace BusinesLogic
         {
             _dbContext = dbContext;
             _repositoryOperation = new GenericRepositoryOperation<Registration>(_dbContext);
+            _forgetPasswordView = new GenericRepositoryOperation<ForgetPasswordView>(_dbContext);
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
@@ -39,8 +43,13 @@ namespace BusinesLogic
                 firstName = register.firstName,
                 lastName = register.lastName,
                 Email = register.email,
-                UserName = register.email
-            }; 
+                UserName = register.email,
+                isActive = register.isActive,
+                createdOn = DateTime.UtcNow,
+                createdBy = register.firstName + register.lastName,
+                modifiedOn = DateTime.UtcNow,
+                modifiedBy = register.firstName + register.lastName
+            };
             return await _userManager.CreateAsync(user, register.password);
             //try
             //{
@@ -98,5 +107,38 @@ namespace BusinesLogic
             var users = _userManager.Users.ToList();
             return users;
         }
+
+        public Registration ForgetPassword(int userId)
+        {
+            var data = _repositoryOperation.GetAll();
+            var check = data.Where(val => val.registrationId == userId).FirstOrDefault();
+            return check;
+        }
+
+        /*public async Task GenerateForgetPasswordToken(ApplicationUser user)
+        {
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            if (!string.IsNullOrEmpty(token))
+            {
+                await SendForgetPasswordEmail(user, token);
+            }
+        }*/
+
+        /*public async Task SendForgetPasswordEmail(ApplicationUser user, string token)
+        {
+            string appDomain = _configuration.GetSection("Application:AppDomain").Value;
+            string confirmationLink = _configuration.GetSection("Application:EmailConfirmation").Value;
+            UserEmail email = new UserEmail()
+            {
+                ToEmails = new List<string>() { user.Email },
+                PlaceHolders = new List<KeyValuePair<string, string>>()
+                {
+                    new KeyValuePair<string, string>("{{UserName}}", user.firstName),
+                    new KeyValuePair<string, string>("{{Link}}",
+                        string.Format(appDomain + confirmationLink, user.Id, token))
+                }
+            };
+            await _emailService.SendEmailForForgotPassword(options);
+        }*/
     }
 }
