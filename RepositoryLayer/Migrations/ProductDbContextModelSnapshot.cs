@@ -108,6 +108,29 @@ namespace RepositoryLayer.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("DomainLayer.MasterData.MasterData", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("masterData")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("MasterData");
+
+                    b.Property<int>("parantId")
+                        .HasColumnType("int")
+                        .HasColumnName("PerantId");
+
+                    b.HasKey("id");
+
+                    b.ToTable("masterDatas");
+                });
+
             modelBuilder.Entity("DomainLayer.Product", b =>
                 {
                     b.Property<int>("id")
