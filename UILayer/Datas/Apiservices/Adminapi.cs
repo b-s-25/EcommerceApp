@@ -6,11 +6,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
-using UILayer.Datas.Apiservices.Interface;
+
 
 namespace UILayer.Datas.Apiservices
 {
-    public class Adminapi:IAdminapi
+    public class Adminapi
     {
         public IEnumerable<Registration> GetUserInfo()
         {

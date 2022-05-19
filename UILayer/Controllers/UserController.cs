@@ -92,6 +92,7 @@ namespace UILayer.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         [AllowAnonymous, HttpPost("fotgot-password")]
         public async Task<IActionResult> ForgotPassword(ForgetPasswordView password)
         {
@@ -144,5 +145,57 @@ namespace UILayer.Controllers
         }
 
 
+=======
+        //[HttpPost]
+        //public IActionResult ForgetPassword(ForgetPasswordView forgetPasswordView)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            ModelState.Clear();
+        //            var userDetails = _userApi.GetUserInfo().Where(check => check.email.Equals(forgetPasswordView.email)).FirstOrDefault();
+        //            if (userDetails!=null)
+        //            {
+        //                forgetPasswordView.emailSent = true;
+        //                return Redirect("/user/ResetPassword?email=" + forgetPasswordView.email);
+        //            }
+                   
+
+        //        }
+        //        return View(forgetPasswordView);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        return BadRequest(ex);
+        //    }
+        //}
+
+        //[HttpGet]
+        //public ActionResult ResetPassword(string email)
+        //{
+        //    var userDetails = _userApi.GetUserInfo().Where(check => check.email.Equals(email)).FirstOrDefault();
+        //    //ResetPassword reset = new ResetPassword();
+        //    reset.user = userDetails;
+        //    return View(reset);
+        //}
+
+        //[HttpPost]
+        //public ActionResult ResetPassword(ResetPassword resetPassword)
+        //{
+        //    try
+        //    {
+        //        Registration register = new Registration();
+        //        register = _userApi.GetUserInfo().Where(c => c.email.Equals(resetPassword.user.email)).FirstOrDefault();
+        //        register.password = resetPassword.newPassword;
+        //        var result = _userApi.EditUserInfo(register);
+        //        return View(resetPassword);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        return BadRequest(ex);
+        //    }
+        //}
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
     }
 }

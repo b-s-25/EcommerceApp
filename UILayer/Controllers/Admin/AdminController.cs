@@ -3,13 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 using UILayer.Datas.Apiservices;
-using UILayer.Datas.Apiservices.Interface;
 
 namespace UILayer.Controllers.Admin
 {
     public class AdminController : Controller
     {
-        private  IAdminapi _adminapi;
+        private  Adminapi _adminapi;
         public AdminController()
         {
             _adminapi = new Adminapi();

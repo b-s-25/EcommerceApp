@@ -1244,19 +1244,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ageorge\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
       "projectName": "DomainLayer",
-      "projectPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
-      "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
-      "outputPath": "D:\\Final DemoProject\\EcommerceApp\\DomainLayer\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\DomainLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1310,7 +1310,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
       }
     }
   }

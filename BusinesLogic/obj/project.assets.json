@@ -5977,19 +5977,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ageorge\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final DemoProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
       "projectName": "BusinesLogic",
-      "projectPath": "D:\\Final DemoProject\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
-      "packagesPath": "C:\\Users\\ageorge\\.nuget\\packages\\",
-      "outputPath": "D:\\Final DemoProject\\EcommerceApp\\BusinesLogic\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\BusinesLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ageorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6003,8 +6003,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "D:\\Final DemoProject\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\New folder\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }
@@ -6047,7 +6047,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
       }
     }
   }

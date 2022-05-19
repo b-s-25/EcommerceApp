@@ -15,54 +15,66 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 using DomainLayer.DTO;
 using Microsoft.Extensions.Options;
+using DomainLayer.MasterData;
 
 namespace BusinesLogic
 {
-    public class UserOperations : IUserOperations
+    public class UserOperations /*: *//*IUserOperations*/
     {
         private readonly IGenericRepositoryOperation<Registration> _repositoryOperation;
-        private readonly IGenericRepositoryOperation<ForgetPasswordView> _forgetPasswordView;
+        //private readonly IGenericRepositoryOperation<ForgetPasswordView> _forgetPasswordView;
         private readonly ProductDbContext _dbContext;
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
+<<<<<<< HEAD
         private readonly IEmailService _emailService;
         public UserOperations(ProductDbContext dbContext, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IEmailService emailService)
+=======
+        private readonly IGenericRepositoryOperation<MasterData> _repo;
+        public UserOperations(ProductDbContext dbContext, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IGenericRepositoryOperation<MasterData> repo)
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
         {
             _dbContext = dbContext;
             _repositoryOperation = new GenericRepositoryOperation<Registration>(_dbContext);
-            _forgetPasswordView = new GenericRepositoryOperation<ForgetPasswordView>(_dbContext);
+            //_forgetPasswordView = new GenericRepositoryOperation<ForgetPasswordView>(_dbContext);
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+<<<<<<< HEAD
             _emailService = emailService;
+=======
+            _repo=new GenericRepositoryOperation<MasterData>(_dbContext);
+
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
         }
-        public async Task<IdentityResult> Register(Registration register)
-        //public async Task<bool> Register(Registration register)
-        {
-            var user = new ApplicationUser()
-            {
-                firstName = register.firstName,
-                lastName = register.lastName,
-                Email = register.email,
-                UserName = register.email,
-                isActive = register.isActive,
-                createdOn = DateTime.UtcNow,
-                createdBy = register.firstName + register.lastName,
-                modifiedOn = DateTime.UtcNow,
-                modifiedBy = register.firstName + register.lastName
-            };
-            return await _userManager.CreateAsync(user, register.password);
-            //try
-            //{
-            //    _repositoryOperation.Add(register);
-            //    return true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    return false;
-            //}
-        }
+        //public async Task<IdentityResult> Register(Registration register)
+        ////public async Task<bool> Register(Registration register)
+        //{
+        //    var user = new ApplicationUser()
+        //    {
+        //        firstName = register.firstName,
+        //        lastName = register.lastName,
+        //        Email = register.email,
+        //        UserName = register.email,
+        //        isActive = register.isActive,
+        //        createdOn = DateTime.UtcNow,
+        //        createdBy = register.firstName + register.lastName,
+        //        modifiedOn = DateTime.UtcNow,
+        //        modifiedBy = register.firstName + register.lastName
+        //    };
+        //    return await _userManager.CreateAsync(user, register.password);
+        //    //try
+        //    //{
+        //    //    _repositoryOperation.Add(register);
+        //    //    return true;
+        //    //}
+        //    //catch (Exception ex)
+        //    //{
+        //    //    return false;
+        //    //}
+        //}
 
         public async Task<Registration> Authenticate(string username, string password)
         {
@@ -145,11 +157,98 @@ namespace BusinesLogic
                 }
             };
             await _emailService.SendEmailForForgotPassword(options);
+<<<<<<< HEAD
         }
 
         public async Task<IdentityResult> ResetPasswordAsync(ResetPassword resetpassword)
         {
             return await _userManager.ResetPasswordAsync(await _userManager.FindByIdAsync(resetpassword.userId), resetpassword.token, resetpassword.newPassword);
         }
+=======
+        }*/
+
+
+
+
+        //MASTERDATA OPERATIONS
+
+        //public async Task MasterDataAdd(MasterData data)
+        //{
+        //   _repo.Add(data);
+        //    _repo.Save();
+        //}
+
+        //public async Task MasterDataDelete(MasterData entity)
+        //{
+        //    _repo.Delete(entity);
+        //    _repo.Save();
+        //}
+
+        //public IEnumerable<MasterData> GetAllMasterData()
+        //{
+        //    return _repo.GetAll();
+        //}
+
+        //public async Task MasterDataEdit(MasterData entity)
+        //{
+        //    _repo.Update(entity);
+        //    _repo.Save();
+        //}
+
+        //public MasterData MasterDataGetById(int Id)
+        //{
+        //    return _repo.GetById(Id);
+        //}
+
+        //Task<IdentityResult> IUserOperations.Register(Registration register)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task<Registration> IUserOperations.Authenticate(string username, string password)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task IUserOperations.Edit(Registration user)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task<string> IUserOperations.Userlogin(Login login)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task<List<ApplicationUser>> IUserOperations.GetUser()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task IUserOperations.MasterDataAdd(MasterData data)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task IUserOperations.MasterDataDelete(MasterData entity)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task<IEnumerable<MasterData>> IUserOperations.GetAllMasterData()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task IUserOperations.MasterDataEdit(MasterData entity)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //MasterData IUserOperations.MasterDataGetById(int Id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+>>>>>>> 62d7853b8e1d6ebb61d961d389c7c885b1d2ffc2
     }
 }

@@ -10,7 +10,17 @@
       "ProjectGuid": "da283d2b-ccda-4632-ac25-cb458afc06d7",
       "DisplayName": "UILayer",
       "ColorIndex": 1
+    },
+    "eacdfa8c-5966-49f1-bdd2-d79e49fe30c4": {
+      "ProjectGuid": "eacdfa8c-5966-49f1-bdd2-d79e49fe30c4",
+      "DisplayName": "BusinesLogic",
+      "ColorIndex": 2
+    },
+    "67ea0605-ed59-4ea9-acf0-10b77d96def4": {
+      "ProjectGuid": "67ea0605-ed59-4ea9-acf0-10b77d96def4",
+      "DisplayName": "RepositoryLayer",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
