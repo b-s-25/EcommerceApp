@@ -26,7 +26,8 @@ namespace BusinesLogic
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
-        public UserOperations(ProductDbContext dbContext, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        private readonly IEmailService _emailService;
+        public UserOperations(ProductDbContext dbContext, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IEmailService emailService)
         {
             _dbContext = dbContext;
             _repositoryOperation = new GenericRepositoryOperation<Registration>(_dbContext);
@@ -34,6 +35,7 @@ namespace BusinesLogic
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+            _emailService = emailService;
         }
         public async Task<IdentityResult> Register(Registration register)
         //public async Task<bool> Register(Registration register)
@@ -104,34 +106,38 @@ namespace BusinesLogic
         public async Task<List<ApplicationUser>> GetUser()
         {
             //return _repositoryOperation.GetAll();
-            var users = _userManager.Users.ToList();
+            var users =_userManager.Users.ToList();
             return users;
         }
 
-        public Registration ForgetPassword(int userId)
+        /*public Registration ForgetPassword(int userId)
         {
             var data = _repositoryOperation.GetAll();
             var check = data.Where(val => val.registrationId == userId).FirstOrDefault();
             return check;
-        }
+        }*/
 
-        /*public async Task GenerateForgetPasswordToken(ApplicationUser user)
+        public async Task<ApplicationUser> GetUserByEmailAsync(string email)
+        {
+            return await _userManager.FindByEmailAsync(email);
+        }
+        public async Task GenerateForgotPasswordTokenAsync(ApplicationUser user)
         {
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             if (!string.IsNullOrEmpty(token))
             {
-                await SendForgetPasswordEmail(user, token);
+                await SendForgotPasswordEmail(user, token);
             }
-        }*/
-
-        /*public async Task SendForgetPasswordEmail(ApplicationUser user, string token)
+        }
+        private async Task SendForgotPasswordEmail(ApplicationUser user, string token)
         {
             string appDomain = _configuration.GetSection("Application:AppDomain").Value;
-            string confirmationLink = _configuration.GetSection("Application:EmailConfirmation").Value;
-            UserEmail email = new UserEmail()
+            string confirmationLink = _configuration.GetSection("Application:ForgotPassword").Value;
+
+            UserEmail options = new UserEmail
             {
-                ToEmails = new List<string>() { user.Email },
-                PlaceHolders = new List<KeyValuePair<string, string>>()
+                toEmails = new List<string>() { user.Email },
+                placeHolders = new List<KeyValuePair<string, string>>()
                 {
                     new KeyValuePair<string, string>("{{UserName}}", user.firstName),
                     new KeyValuePair<string, string>("{{Link}}",
@@ -139,6 +145,11 @@ namespace BusinesLogic
                 }
             };
             await _emailService.SendEmailForForgotPassword(options);
-        }*/
+        }
+
+        public async Task<IdentityResult> ResetPasswordAsync(ResetPassword resetpassword)
+        {
+            return await _userManager.ResetPasswordAsync(await _userManager.FindByIdAsync(resetpassword.userId), resetpassword.token, resetpassword.newPassword);
+        }
     }
 }

@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using UILayer.Datas.Apiservices;
 using DomainLayer.Users;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Principal;
+using BusinesLogic;
+using BusinesLogic.Interface;
 
 namespace UILayer.Controllers
 {
@@ -20,10 +23,12 @@ namespace UILayer.Controllers
         private UserApi _userApi;
         private IConfiguration _configuration;
         private Registration _registration;
-        public UserController(IConfiguration configuration)
+        private EmailConfirmation _emailConfirmation;
+        public UserController(IConfiguration configuration, EmailConfirmation emailConfirmation)
         {
             _userApi = new UserApi(_configuration);
             _configuration = configuration;
+            _emailConfirmation = emailConfirmation;
         }
         public IActionResult Index()
         {
@@ -53,10 +58,8 @@ namespace UILayer.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginView loginView)
-        //public async Task<IActionResult> Login(Login loginView)
         {
             LoginView userLogin = new LoginView();
-            //Login userLogin = new Login();
             _registration = _userApi.GetUserInfo().Where(register => register.email == loginView.username).FirstOrDefault();
             userLogin = loginView;
             bool check = _userApi.UserLogin(loginView);
@@ -83,62 +86,63 @@ namespace UILayer.Controllers
             return Redirect("Login");
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult ForgetPassword()
+        [AllowAnonymous, HttpGet("fotgot-password")]
+        public IActionResult ForgotPassword()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult ForgetPassword(ForgetPasswordView forgetPasswordView)
+        [AllowAnonymous, HttpPost("fotgot-password")]
+        public async Task<IActionResult> ForgotPassword(ForgetPasswordView password)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+
+                var user = await _emailConfirmation.GetUserByEmailAsync(password.email);
+                if (user != null)
+                {
+                    await _emailConfirmation.GenerateForgotPasswordTokenAsync(user);
+                }
+
+                ModelState.Clear();
+                password.emailSent = true;
+            }
+            return View(password);
+        }
+
+        [AllowAnonymous, HttpGet("reset-password")]
+        public IActionResult ResetPassword(string uid, string token)
+        {
+            ResetPassword resetPassword = new ResetPassword
+            {
+                token = token,
+                userId = uid
+            };
+            return View(resetPassword);
+        }
+
+        [AllowAnonymous, HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPassword password)
+        {
+            if (ModelState.IsValid)
+            {
+                password.token = password.token.Replace(' ', '+');
+                var result = await _emailConfirmation.ResetPasswordAsync(password);
+                if (result.Succeeded)
                 {
                     ModelState.Clear();
-                    var userDetails = _userApi.GetUserInfo().Where(check => check.email.Equals(forgetPasswordView.email)).FirstOrDefault();
-                    if (userDetails!=null)
-                    {
-                        forgetPasswordView.emailSent = true;
-                        return Redirect("/user/ResetPassword?email=" + forgetPasswordView.email);
-                    }
-                   
-
+                    password.isSuccess = true;
+                    return View(password);
                 }
-                return View(forgetPasswordView);
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
             }
-            catch(Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            return View(password);
         }
 
-        [HttpGet]
-        public ActionResult ResetPassword(string email)
-        {
-            var userDetails = _userApi.GetUserInfo().Where(check => check.email.Equals(email)).FirstOrDefault();
-            ResetPassword reset = new ResetPassword();
-            reset.user = userDetails;
-            return View(reset);
-        }
 
-        [HttpPost]
-        public ActionResult ResetPassword(ResetPassword resetPassword)
-        {
-            try
-            {
-                Registration register = new Registration();
-                register = _userApi.GetUserInfo().Where(c => c.email.Equals(resetPassword.user.email)).FirstOrDefault();
-                register.password = resetPassword.newPassword;
-                var result = _userApi.EditUserInfo(register);
-                return View(resetPassword);
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex);
-            }
-        }
     }
 }
