@@ -12,6 +12,7 @@ namespace BusinesLogic.Interface
         IEnumerable<Product> GetAll();
         void Add(Product entity);
         void Update(Product entity);
+        //void Delete(Product entity);
         void Delete(Product entity);
         Product GetById(int Id);
         void Save();

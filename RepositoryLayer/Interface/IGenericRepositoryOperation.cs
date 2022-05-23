@@ -15,6 +15,5 @@ namespace RepositoryLayer.Interface
         void Delete(T entity);
         T GetById(int Id);
         void Save();
-
     }
 }

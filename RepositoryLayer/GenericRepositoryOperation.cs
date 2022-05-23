@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer
 {
-    public class GenericRepositoryOperation<T> : IGenericRepositoryOperation<T> where T : class 
+    public class RepositoryOperation<T> : IGenericRepositoryOperation<T> where T : class 
     {
 
         DbContext _Context;
         readonly DbSet<T> _dbset;
-        public GenericRepositoryOperation(DbContext product)
+        public RepositoryOperation(DbContext product)
         {
             _Context = product;
             _dbset = _Context.Set<T>();
@@ -52,9 +52,4 @@ namespace RepositoryLayer
             _Context.SaveChanges();
         }
     }
-    
-
-
-
-    
 }

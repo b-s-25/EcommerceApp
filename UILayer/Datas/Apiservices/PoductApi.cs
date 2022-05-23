@@ -10,13 +10,15 @@ namespace UILayer.Datas.Apiservices
 {
     public class PoductApi
     {
-        public static IEnumerable<Product> GetAll()
+        public static IEnumerable<Product> index()
+        
         {
+            
             IEnumerable<Product> products = new List<Product>();
             
             using(HttpClient httpClient = new HttpClient())
             {
-                string url = "https://localhost:44364/api/productcatalog";
+                string url = "https://localhost:44364/api/ProductCatagory/Index";
                 Uri uri = new Uri(url);
                 Task<HttpResponseMessage> result=httpClient.GetAsync(uri);
                 if (result.Result.IsSuccessStatusCode)
@@ -30,15 +32,13 @@ namespace UILayer.Datas.Apiservices
 
         }
 
-
-
         public static Product GetById(int id)
         {
             Product products = new Product();
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string url = "https://localhost:44364/api/productcatalog" + id;
+                string url = "https://localhost:44364/api/productcatagory/Details?id=" + id;
                 Uri uri = new Uri(url);
                 Task<HttpResponseMessage> result = httpClient.GetAsync(uri);
                 if (result.Result.IsSuccessStatusCode)
@@ -46,22 +46,23 @@ namespace UILayer.Datas.Apiservices
                     Task<string> serilizedResult = result.Result.Content.ReadAsStringAsync();
                     products = Newtonsoft.Json.JsonConvert.DeserializeObject<Product>(serilizedResult.Result);
                 }
-
             }
             return products;
-
         }
+
+        
+
         public static bool Edit(Product product )
         {
             using (HttpClient httpclient = new HttpClient())
             {
                 string data = Newtonsoft.Json.JsonConvert.SerializeObject(product);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                string url = "https://localhost:44364/api/product/";
+                string url = "https://localhost:44364/api/ProductCatagory/ProductPut";
                 Uri uri = new Uri(url);
-                System.Threading.Tasks.Task<HttpResponseMessage> response = httpclient.PutAsync(uri, content);
+                HttpResponseMessage response =  httpclient.PutAsync(uri, content).Result;
 
-                if (response.Result.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
                     return true;
                 }
@@ -75,7 +76,7 @@ namespace UILayer.Datas.Apiservices
             {
                 string data = Newtonsoft.Json.JsonConvert.SerializeObject(product);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                string url = "https://localhost:44364/api/product/";
+                string url = "https://localhost:44364/api/ProductCatagory/ProductPost";
                 Uri uri = new Uri(url);
                 System.Threading.Tasks.Task<HttpResponseMessage> response = httpclient.PostAsync(uri, content);
 
@@ -95,7 +96,7 @@ namespace UILayer.Datas.Apiservices
             {
                 string data = Newtonsoft.Json.JsonConvert.SerializeObject(id);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                string url = "https://localhost:44364/api/product/" + id;
+                string url = "https://localhost:44364/api/productcatagory/ProductDelete/" + id;
                 Uri uri = new Uri(url);
                 System.Threading.Tasks.Task<HttpResponseMessage> response = httpclient.DeleteAsync(uri);
 

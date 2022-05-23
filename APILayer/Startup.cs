@@ -41,6 +41,7 @@ namespace APILayer
             });
             services.AddDbContext<ProductDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped(typeof(IProductCatalog),typeof(ProductCatalog));
+            services.AddScoped(typeof(IProductCatagory), typeof(ProductCatagory));
 
         }
 

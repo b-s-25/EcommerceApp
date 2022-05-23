@@ -18,7 +18,7 @@ namespace BusinesLogic
         {
 
             _Context=Context;
-            _Repo=new GenericRepositoryOperation<Product>(_Context);
+            _Repo=new RepositoryOperation<Product>(_Context);
         }
 
         public void Add(Product entity)

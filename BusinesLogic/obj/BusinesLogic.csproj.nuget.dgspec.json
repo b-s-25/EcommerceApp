@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {}
+    "C:\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {
+    "C:\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
+        "projectUniqueName": "C:\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
         "projectName": "BusinesLogic",
-        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\BusinesLogic\\obj\\",
+        "projectPath": "C:\\EcommerceApp\\BusinesLogic\\BusinesLogic.csproj",
+        "packagesPath": "C:\\Users\\cthomas\\.nuget\\packages\\",
+        "outputPath": "C:\\EcommerceApp\\BusinesLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\cthomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
+              "C:\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
+                "projectPath": "C:\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj"
               }
             }
           }
@@ -44,6 +50,34 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.AspNet.WebHelpers": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "OpenXmlPowerTools": {
+              "target": "Package",
+              "version": "[4.5.3.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -51,6 +85,14 @@
             "Serilog.Settings.Configuration": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "WireMock.Net.Abstractions": {
+              "target": "Package",
+              "version": "[1.4.41, )"
             }
           },
           "imports": [
@@ -68,22 +110,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+    "C:\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+        "projectUniqueName": "C:\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
         "projectName": "DomainLayer",
-        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\obj\\",
+        "projectPath": "C:\\EcommerceApp\\DomainLayer\\DomainLayer.csproj",
+        "packagesPath": "C:\\Users\\cthomas\\.nuget\\packages\\",
+        "outputPath": "C:\\EcommerceApp\\DomainLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\cthomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -108,6 +156,34 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.AspNet.WebHelpers": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "OpenXmlPowerTools": {
+              "target": "Package",
+              "version": "[4.5.3.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -115,6 +191,14 @@
             "Serilog.Settings.Configuration": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "WireMock.Net.Abstractions": {
+              "target": "Package",
+              "version": "[1.4.41, )"
             }
           },
           "imports": [
@@ -132,22 +216,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "C:\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "C:\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\RepositoryLayer\\obj\\",
+        "projectPath": "C:\\EcommerceApp\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\cthomas\\.nuget\\packages\\",
+        "outputPath": "C:\\EcommerceApp\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\cthomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -160,8 +250,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Source\\Repos\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
+              "C:\\EcommerceApp\\DomainLayer\\DomainLayer.csproj": {
+                "projectPath": "C:\\EcommerceApp\\DomainLayer\\DomainLayer.csproj"
               }
             }
           }
@@ -176,9 +266,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "AutoMapper": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.AspNet.WebHelpers": {
+              "target": "Package",
+              "version": "[3.2.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -200,6 +294,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "OpenXmlPowerTools": {
+              "target": "Package",
+              "version": "[4.5.3.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -207,6 +305,14 @@
             "Serilog.Settings.Configuration": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "WireMock.Net.Abstractions": {
+              "target": "Package",
+              "version": "[1.4.41, )"
             }
           },
           "imports": [
@@ -224,7 +330,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

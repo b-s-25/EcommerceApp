@@ -27,7 +27,7 @@ namespace APILayer
             Serilog.Debugging.SelfLog.Enable(msg =>
             {
                 Debug.Print(msg);
-                Debugger.Break();
+                //Debugger.Break();
             });
             CreateHostBuilder(args).Build().Run();
         }
